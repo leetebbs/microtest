@@ -8,9 +8,9 @@ app.use(express.json());
 
 const data = {
     "userAccount": "0x1ABc133C222a185fEde2664388F08ca12C208F76",
-    "tokenId": 1,
-    "powerGenerated": 1000,
-    "powerConsumed": 800,
+    "tokenId": "1",
+    "powerGenerated": "1000",
+    "powerConsumed": "800",
 }
 
 
