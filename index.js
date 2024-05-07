@@ -55,44 +55,44 @@ app.get("/api/users",async  (req, res) => {
 }
 })
 //endpoint to get the generated power for a given token id
-app.get("/api/users/generated/:tokenId", async (req, res) => {
-    console.log({
-        requestParams: req.params,
-        requestQuery: req.query
-    });
-    try {
-        const tokenId = req.params.tokenId;
-        const user = await User.findOne({ tokenId: tokenId });
-        if (!user) {
-            return res.status(404).json({ message: "User not found" });
-        }
-        res.json(user.powerGenerated);
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).json({ message: "Server Error" });
-    }
-  }
-)
+// app.get("/api/users/generated/:tokenId", async (req, res) => {
+//     console.log({
+//         requestParams: req.params,
+//         requestQuery: req.query
+//     });
+//     try {
+//         const tokenId = req.params.tokenId;
+//         const user = await User.findOne({ tokenId: tokenId });
+//         if (!user) {
+//             return res.status(404).json({ message: "User not found" });
+//         }
+//         res.json(user.powerGenerated);
+//     } catch (error) {
+//         console.error(error.message);
+//         res.status(500).json({ message: "Server Error" });
+//     }
+//   }
+// )
 //this
 //endpoint to get the consumed power for a given token id
-app.get("/api/users/consumed/:tokenId", async (req, res) => {
-    console.log({
-        requestParams: req.params,
-        requestQuery: req.query
-    });
-    try {
-        const tokenId = req.params.tokenId;
-        const user = await User.findOne({ tokenId: tokenId });
-        if (!user) {
-            return res.status(404).json({ message: "User not found" });
-        }
-        res.json(user.powerConsumed);
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).json({ message: "Server Error" });
-    }
-  }
-)
+// app.get("/api/users/consumed/:tokenId", async (req, res) => {
+//     console.log({
+//         requestParams: req.params,
+//         requestQuery: req.query
+//     });
+//     try {
+//         const tokenId = req.params.tokenId;
+//         const user = await User.findOne({ tokenId: tokenId });
+//         if (!user) {
+//             return res.status(404).json({ message: "User not found" });
+//         }
+//         res.json(user.powerConsumed);
+//     } catch (error) {
+//         console.error(error.message);
+//         res.status(500).json({ message: "Server Error" });
+//     }
+//   }
+// )
 
 
 
