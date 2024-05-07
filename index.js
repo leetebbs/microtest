@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 const mongoConnectURL = "mongodb+srv://microgen309:qLFM4hpme4Beja8m@cluster0.llcud9d.mongodb.net/microgen?retryWrites=true&w=majority&appName=Cluster0";
 
 const User = require("./models/user");
-const { givenProvider } = require("web3");
+
 
 // const user = new User({
 //   address: "0x07Ad7099E450aB9B1bb869C1988e7f2b566c0D7d",
@@ -30,30 +30,30 @@ app.get("/", (req, res) => {
 
 
 //endpoint to create a new user
-app.post("/api/users", async (req, res) => {
-    console.log(req.body)
-  try {
-    const user = new User(req.body);
-    await user.save();
-    res.status(201).json({ message: "User created successfully", user });
-  } catch (error) {
-    console.log(error.message);
-    res.status(400).json({ message: error.message });
-  }
-})
+// app.post("/api/users", async (req, res) => {
+//     console.log(req.body)
+//   try {
+//     const user = new User(req.body);
+//     await user.save();
+//     res.status(201).json({ message: "User created successfully", user });
+//   } catch (error) {
+//     console.log(error.message);
+//     res.status(400).json({ message: error.message });
+//   }
+// })
 
 //endpoint to get all users
-app.get("/api/users",async  (req, res) => {
-    try {
-    const result = await User.find();
-  res.json({
-    "Users ": result
-  });
-} catch (error) {
-  console.log(error.message);
-  res.status(500).json({ message: error.message });
-}
-})
+// app.get("/api/users",async  (req, res) => {
+//     try {
+//     const result = await User.find();
+//   res.json({
+//     "Users ": result
+//   });
+// } catch (error) {
+//   console.log(error.message);
+//   res.status(500).json({ message: error.message });
+// }
+// })
 //endpoint to get the generated power for a given token id
 // app.get("/api/users/generated/:tokenId", async (req, res) => {
 //     console.log({
