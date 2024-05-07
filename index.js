@@ -12,7 +12,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 const mongoConnectURL = "mongodb+srv://microgen309:qLFM4hpme4Beja8m@cluster0.llcud9d.mongodb.net/microgen?retryWrites=true&w=majority&appName=Cluster0";
 
-const User = require("./models/user");
+// const User = require("./models/user");
 
 
 // const user = new User({
