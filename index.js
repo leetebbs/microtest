@@ -73,7 +73,7 @@ app.get("/api/users/generated/:tokenId", async (req, res) => {
     }
   }
 )
-
+//this
 //endpoint to get the consumed power for a given token id
 app.get("/api/users/consumed/:tokenId", async (req, res) => {
     console.log({
