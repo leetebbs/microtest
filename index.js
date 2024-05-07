@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
-const mongoConnectURL = process.env.MONGO_CONNECT_URL;
+const mongoConnectURL = "mongodb+srv://microgen309:qLFM4hpme4Beja8m@cluster0.llcud9d.mongodb.net/microgen?retryWrites=true&w=majority&appName=Cluster0";
 
 const User = require("./models/user");
 const { givenProvider } = require("web3");
@@ -99,7 +99,7 @@ app.get("/api/users/consumed/:tokenId", async (req, res) => {
 const start = async () => {
   try {
     await mongoose.connect(mongoConnectURL);
-    app.listen(PORT, () => {
+    app.listen(5000, () => {
       console.log("Server started on port " + PORT);
     });
   } catch (error) {
