@@ -96,6 +96,20 @@ app.get("/api/users/consumed/:tokenId", async (req, res) => {
 )
 
 
+app.patch("/api/users/update/:tokenId", async (req, res) => {
+  try {
+    const tokenId = req.params.tokenId;
+    const user = await User.findOneAndUpdate({ tokenId: tokenId }, req.body, {new: true});
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.json({user});
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ message: "Server Error" });
+  }
+})
+
 
 const start = async () => {
   try {
