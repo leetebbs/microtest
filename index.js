@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 
 
 //endpoint to create a new user
-app.post("/api/users", async (req, res) => {
+app.post("/api/newUser", async (req, res) => {
     console.log(req.body)
   try {
     const user = new User(req.body);
