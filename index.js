@@ -55,6 +55,7 @@ app.get("/api/users",async  (req, res) => {
   res.status(500).json({ message: error.message });
 }
 })
+
 //endpoint to get the generated power for a given token id
 app.get("/api/users/generated/:tokenId", async (req, res) => {
     console.log({
@@ -74,7 +75,7 @@ app.get("/api/users/generated/:tokenId", async (req, res) => {
     }
   }
 )
-//this
+
 //endpoint to get the consumed power for a given token id
 app.get("/api/users/consumed/:tokenId", async (req, res) => {
     console.log({
@@ -95,7 +96,11 @@ app.get("/api/users/consumed/:tokenId", async (req, res) => {
   }
 )
 
-
+//endpoint to update a user data
+// {
+//     "powerGenerated": 8000,
+//     "powerConsumed": 12300
+// }
 app.patch("/api/users/update/:tokenId", async (req, res) => {
   try {
     const tokenId = req.params.tokenId;
