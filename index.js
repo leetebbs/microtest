@@ -8,10 +8,11 @@ mongoose.set("strictQuery", false);
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+// gMAHXtY9YI6svZnF
+// vercel-admin-user 
 const PORT = process.env.PORT || 3000;
-const mongoConnectURL = "mongodb+srv://microgen309:qLFM4hpme4Beja8m@cluster0.llcud9d.mongodb.net/microgen?retryWrites=true&w=majority&appName=Cluster0";
-
+// const mongoConnectURL = "mongodb+srv://microgen309:qLFM4hpme4Beja8m@cluster0.llcud9d.mongodb.net/microgen?retryWrites=true&w=majority&appName=Cluster0";
+const mongoConnectURL = "mongodb+srv://vercel-admin-user:gMAHXtY9YI6svZnF@cluster0.8fmjd0p.mongodb.net/microgen?retryWrites=true&w=majority&appName=Cluster0"
 const User = require("./models/user");
 
 
