@@ -98,7 +98,7 @@ app.get("/api/users/consumed/:tokenId", async (req, res) => {
 
 const start = async () => {
   try {
-    // await mongoose.connect(mongoConnectURL);
+    await mongoose.connect(mongoConnectURL);
     app.listen(5000, () => {
       console.log("Server started on port " + PORT);
     });
