@@ -8,21 +8,10 @@ mongoose.set("strictQuery", false);
 const app = express();
 app.use(cors());
 app.use(express.json());
-// gMAHXtY9YI6svZnF
-// vercel-admin-user 
+
 const PORT = process.env.PORT || 3000;
 const mongoConnectURL = process.env.MONGO_CONNECT_URL;
 const User = require("./models/user");
-
-
-// const user = new User({
-//   address: "0x07Ad7099E450aB9B1bb869C1988e7f2b566c0D7d",
-//   tokenId: 2,
-//   powerGenerated: 3000,
-//   powerConsumed: 1800,
-// });
-
-// user.save();
 
 app.get("/", (req, res) => {
   res.send("Microgen server is up and running");
