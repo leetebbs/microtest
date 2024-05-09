@@ -2,6 +2,10 @@
 
 Microgen Server is a Node.js application built with Express and MongoDB, providing endpoints to manage user data related to power generation and consumption.
 
+## Server Vercel Endpoint
+
+- https://microtest-ivory.vercel.app/
+
 ## Prerequisites
 
 - Node.js installed on your machine
